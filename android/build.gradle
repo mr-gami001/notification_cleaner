@@ -24,6 +24,21 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 36
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
+    }
+    kotlinOptions {
+        jvmTarget = '21'
+    }
+
+    // Configure the JVM toolchain for JDK 21
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        }
+    }
+
     defaultConfig {
         minSdkVersion 16
     }
