@@ -1,28 +1,20 @@
-name: clear_all_notifications_example
-description: Demonstrates how to use the clear_all_notifications plugin.
+name: notification_cleaner_example
+description: Demonstrates how to use the notification_cleaner plugin.
 
-# The following line prevents the package from being accidentally published to
-# pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
 environment:
-  sdk: ">=2.12.0 <4.0.0"
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  clear_all_notifications:
-    # When depending on this package from a real application you should use:
-    #   clear_all_notifications: ^x.y.z
-    # See https://dart.dev/tools/pub/dependencies#version-constraints
-    # The example app is bundled with the plugin so we use a path dependency on
-    # the parent directory to use the current plugin's version.
+  notification_cleaner:
     path: ../
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.0
+  permission_handler: ^11.3.1
+  cupertino_icons: ^1.0.1
 
 dev_dependencies:
   flutter_test:

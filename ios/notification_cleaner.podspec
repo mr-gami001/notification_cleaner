@@ -1,15 +1,15 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint clear_all_notifications.podspec' to validate before publishing.
+# Run `pod lib lint notification_cleaner.podspec' to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'clear_all_notifications'
-  s.version          = '0.0.1'
-  s.summary          = 'A new Flutter plugin for clearing all Android and iOS active notifications'
+  s.name             = 'notification_cleaner'
+  s.version          = '2.0.0'
+  s.summary          = 'A modern Flutter plugin for clearing all active notifications on Android and iOS.'
   s.description      = <<-DESC
-A new Flutter plugin for clearing all Android and iOS active notifications
+A modern Flutter plugin for clearing all active notifications on Android and iOS. This is a maintained fork of clear_all_notifications.
                        DESC
-  s.homepage         = 'http://example.com'
+  s.homepage         = 'https://github.com/yourusername/notification_cleaner'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }

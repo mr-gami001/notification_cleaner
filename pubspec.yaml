@@ -1,26 +1,28 @@
-name: clear_all_notifications
-description: A Flutter plugin for clearing all Android and iOS active notifications
-version: 1.0.0
-homepage: https://github.com/razmik-gharibyan/clear_all_notifications
+name: notification_cleaner
+description: Updated fork of clear_all_notifications
+version: 0.0.1
+homepage: https://github.com/mr-gami001/notification_cleaner
 
 environment:
-  sdk: '>=2.12.0 <4.0.0'
-  flutter: ">=1.20.0"
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_lints: ^5.0.0
 
 flutter:
   plugin:
     platforms:
       android:
-        package: com.example.clear_all_notifications
-        pluginClass: ClearAllNotificationsPlugin
+        package: com.example.notification_cleaner
+        pluginClass: NotificationCleanerPlugin
       ios:
-        pluginClass: ClearAllNotificationsPlugin
+        pluginClass: NotificationCleanerPlugin
 

@@ -1,15 +1,9 @@
-## 1.0.0
-- Updated gradle to version 8 and compileSDK to latest version
-- Removed legacy code
+# 2.0.0
 
-## 0.0.3
-
-* Migrate null safety.
-
-## 0.0.2
-
-* Update documentation.
-
-## 0.0.1
-
-* Initial release.
+* Initial release of `notification_cleaner` (forked from `clear_all_notifications`).
+* Renamed package to `notification_cleaner`.
+* Migrated to Dart 3 and full Null Safety.
+* Updated Android implementation to Kotlin.
+* Added support for modern Android SDKs (compileSdkVersion 34+).
+* Simplified public API to `NotificationCleaner.clearAllNotifications()`.
+* Improved example app with Material 3 and permission handling.
