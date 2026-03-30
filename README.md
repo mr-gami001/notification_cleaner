@@ -18,7 +18,7 @@ Add `notification_cleaner` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  notification_cleaner: ^2.0.0
+  notification_cleaner: ^0.0.1
 ```
 
 ## Android Setup
