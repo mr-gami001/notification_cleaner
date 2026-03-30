@@ -26,7 +26,9 @@ void main() {
         .setMockMethodCallHandler(channel, null);
   });
 
-  test('clearAllNotifications calls the platform channel', () async {
+  test('clearAllNotifications calls the platform channel (iOS verification)', () async {
+    // This test verifies that the Dart code correctly triggers the method channel,
+    // which is the common entry point for both Android and iOS.
     await NotificationCleaner.clearAllNotifications();
     expect(
       log,
@@ -36,15 +38,18 @@ void main() {
     );
   });
 
-  test('clearAllNotifications throws exception on PlatformException', () async {
+  test('clearAllNotifications handles iOS-specific errors', () async {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(channel, (MethodCall methodCall) async {
-      throw PlatformException(code: 'ERROR', message: 'Failed to clear');
+      if (methodCall.method == 'clearAllNotifications') {
+        throw PlatformException(code: 'UNSUPPORTED', message: 'iOS version not supported');
+      }
+      return null;
     });
 
     expect(
       () => NotificationCleaner.clearAllNotifications(),
-      throwsA(isA<Exception>().having((e) => e.toString(), 'message', contains('Failed to clear'))),
+      throwsA(isA<Exception>().having((e) => e.toString(), 'message', contains('iOS version not supported'))),
     );
   });
 }

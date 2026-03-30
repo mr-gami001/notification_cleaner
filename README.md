@@ -1,56 +1,131 @@
-# Notification Cleaner
+# notification_cleaner
 
-A modern Flutter plugin for clearing all active notifications from the notification bar on Android and iOS.
+A Flutter plugin to **clear all notifications**, supporting modern platform implementations with proper permission handling.
 
-> [!NOTE]
-> This is a maintained fork of `clear_all_notifications`, updated for Dart 3, Null Safety, and modern Android SDKs.
+> 🚀 Maintained and updated fork of `clear_all_notifications`
 
-## Features
+---
 
-* **One-tap Clear**: Easily clear all active notifications.
-* **Modern Android Support**: Compatible with Android 13+ (API 33+) and `POST_NOTIFICATIONS` permissions.
-* **Dart 3 Ready**: Full null safety and Dart 3 compliance.
-* **Clean API**: Minimal and easy-to-use interface.
+## ✨ Features
 
-## Installation
+* Clear all notifications from the notification tray
+* Supports modern Android versions (including Android 13+)
+* Works with iOS (subject to platform limitations)
+* Simple and minimal API
+* Lightweight and fast
 
-Add `notification_cleaner` to your `pubspec.yaml`:
+---
+
+## 📦 Installation
+
+Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  notification_cleaner: ^0.0.1
+  notification_cleaner: ^1.0.0
 ```
 
-## Android Setup
+Then run:
 
-### Permissions
+```bash
+flutter pub get
+```
 
-For Android 13 (API level 33) and higher, you should request the `POST_NOTIFICATIONS` permission if you haven't already, although `cancelAll()` technically works without it on most devices, it's good practice to ensure your app has notification access.
+---
 
-Add this to your `AndroidManifest.xml`:
+## ⚙️ Setup
+
+### Android
+
+Add permission in `android/app/src/main/AndroidManifest.xml`:
 
 ```xml
-<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 ```
 
-## Usage
+Request permission at runtime (Android 13+):
+
+```dart
+import 'package:permission_handler/permission_handler.dart';
+
+await Permission.notification.request();
+```
+
+---
+
+### iOS
+
+No additional setup is required.
+
+> ⚠️ Note: iOS has system limitations on managing notifications. Behavior may vary compared to Android.
+
+---
+
+## 🚀 Usage
 
 ```dart
 import 'package:notification_cleaner/notification_cleaner.dart';
 
-// Clear all notifications
-try {
-  await NotificationCleaner.clearAllNotifications();
-  print("Notifications cleared!");
-} catch (e) {
-  print("Error: $e");
-}
+await NotificationCleaner.clearAllNotifications();
 ```
 
-## Example
+---
 
-Check the [example](example/lib/main.dart) folder for a complete implementation with permission handling.
+## 📱 Example
 
-## License
+```dart
+ElevatedButton(
+  onPressed: () async {
+    await NotificationCleaner.clearAllNotifications();
+  },
+  child: const Text("Clear Notifications"),
+)
+```
 
-This project is licensed under the Apache License 2.0.
+---
+
+## 📚 API
+
+### clearAllNotifications()
+
+Clears all notifications from the device notification tray.
+
+```dart
+Future<void> clearAllNotifications()
+```
+
+---
+
+## 📝 Notes
+
+* Behavior may differ between Android and iOS due to platform restrictions
+* On Android 13+, notification permission is required
+* Some device manufacturers may restrict background notification access
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Feel free to open issues or submit pull requests.
+
+---
+
+## 🔗 Links
+
+* GitHub Repository: https://github.com/mr-gami001/notification_cleaner
+* Issue Tracker: https://github.com/mr-gami001/notification_cleaner/issues
+* pub.dev: https://pub.dev/packages/notification_cleaner
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+## ❤️ Acknowledgements
+
+This package is a maintained fork of `clear_all_notifications`.
+Thanks to the original authors for their work.

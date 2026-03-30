@@ -4,14 +4,14 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'notification_cleaner'
-  s.version          = '2.0.0'
-  s.summary          = 'A modern Flutter plugin for clearing all active notifications on Android and iOS.'
+  s.version          = '0.0.1'
+  s.summary          = 'A Flutter plugin to clear all notifications on Android and iOS.'
   s.description      = <<-DESC
-A modern Flutter plugin for clearing all active notifications on Android and iOS. This is a maintained fork of clear_all_notifications.
+A Flutter plugin to clear all notifications on Android and iOS, supporting modern implementations and proper permission handling. This is a maintained fork of clear_all_notifications.
                        DESC
-  s.homepage         = 'https://github.com/yourusername/notification_cleaner'
+  s.homepage         = 'https://github.com/mr-gami001/notification_cleaner'
   s.license          = { :file => '../LICENSE' }
-  s.author           = { 'Your Company' => 'email@example.com' }
+  s.author           = { 'mr-gami001' => 'email@example.com' }
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.dependency 'Flutter'
