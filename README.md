@@ -22,7 +22,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  notification_cleaner: ^0.0.3
+  notification_cleaner: ^0.0.4
 ```
 
 Then run:

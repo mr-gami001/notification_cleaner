@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'notification_cleaner'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'A Flutter plugin to clear all notifications on Android and iOS.'
   s.description      = <<-DESC
 A Flutter plugin to clear all notifications on Android and iOS, supporting modern implementations and proper permission handling. This is a maintained fork of clear_all_notifications.

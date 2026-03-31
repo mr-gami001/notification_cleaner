@@ -1,6 +1,6 @@
 name: notification_cleaner
-description: Updated fork of clear_all_notifications
-version: 0.0.3
+description: Programmatically clear all notifications from the system tray with this lightweight Flutter plugin. Supports modern Android and iOS implementations with a simple, minimal API.
+version: 0.0.4
 homepage: https://github.com/mr-gami001/notification_cleaner
 repository: https://github.com/mr-gami001/notification_cleaner
 issue_tracker: https://github.com/mr-gami001/notification_cleaner

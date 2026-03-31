@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.0.3
+## 0.0.4
 
 * Updated dependencies and optimized code.
 * Enhanced metadata for improved visibility on pub.dev.
