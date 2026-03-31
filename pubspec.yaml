@@ -1,6 +1,6 @@
 name: notification_cleaner
 description: Updated fork of clear_all_notifications
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/mr-gami001/notification_cleaner
 repository: https://github.com/mr-gami001/notification_cleaner
 issue_tracker: https://github.com/mr-gami001/notification_cleaner
@@ -17,12 +17,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  permission_handler: ^11.3.1
+  permission_handler: ^12.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 flutter:
   plugin:

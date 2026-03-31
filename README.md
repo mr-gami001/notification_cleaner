@@ -2,7 +2,7 @@
 
 A Flutter plugin to **clear all notifications**, supporting modern platform implementations with proper permission handling.
 
-> 🚀 Maintained and updated fork of `clear_all_notifications`
+> 🚀 Maintained and updated fork of [clear_all_notifications](https://pub.dev/packages/clear_all_notifications)
 
 ---
 
@@ -22,7 +22,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  notification_cleaner: ^1.0.0
+  notification_cleaner: ^0.0.3
 ```
 
 Then run:
